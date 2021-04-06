@@ -227,6 +227,7 @@ module.exports = class cubeScrambleCommand extends Command {
 
         timesLooped++;
       }
+      
       const Scramble3 = new discord.MessageEmbed()
         .setTimestamp()
         .setColor("RANDOM")
@@ -575,6 +576,7 @@ module.exports = class cubeScrambleCommand extends Command {
 
         timesLooped++;
       }
+
       const Scramble4 = new discord.MessageEmbed()
         .setTimestamp()
         .setColor("RANDOM")
@@ -598,128 +600,63 @@ module.exports = class cubeScrambleCommand extends Command {
       var moveTen;
       var moveEleven;
       var moveTwelve;
-      var moveThirteen;
-      var moveFourteen;
-      var moveFifteen;
-      var moveSixteen;
-      var moveSeventeen;
-      var moveEighteen;
-      var moveNineteen;
-      var moveTwenty;
-      var moveTwentyOne;
-      var moveTwentyTwo;
-      var moveTwentyThree;
 
       while (timesLooped != 13) {
         var notation;
-        var cubeScramble = Math.floor(Math.random() * 18) + 1;
+        var cubeScramble = Math.floor(Math.random() * 9) + 1;
 
         if (cubeScramble == 1) {
-          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2") {
             notation = "R";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 2) {
-          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2") {
 
             notation = "R'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 3) {
-          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2") {
             notation = "R2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 4) {
-          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2") {
             notation = "U";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 5) {
-          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2") {
             notation = "U'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 6) {
-          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2") {
             notation = "U2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 7) {
-          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2") {
             notation = "F";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 8) {
-          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2") {
             notation = "F'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 9) {
-          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2") {
             notation = "F2";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 10) {
-          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            notation = "L";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 11) {
-          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            notation = "L'";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 12) {
-          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            notation = "L2";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 13) {
-          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            notation = "D";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 14) {
-          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            notation = "D'";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 15) {
-          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            notation = "D2";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 16) {
-          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            notation = "B";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 17) {
-          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            notation = "B'";
-          } else {
-            timesLooped--;
-          }
-        } else if (cubeScramble == 18) {
-          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            notation = "B2";
           } else {
             timesLooped--;
           }
@@ -755,6 +692,7 @@ module.exports = class cubeScrambleCommand extends Command {
 
         timesLooped++;
       }
+
       const Scramble2 = new discord.MessageEmbed()
         .setTimestamp()
         .setColor("RANDOM")
