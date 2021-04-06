@@ -66,154 +66,118 @@ module.exports = class cubeScrambleCommand extends Command {
 
         if (cubeScramble == 1) {
           if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "R";
-            }
+            notation = "R";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 2) {
           if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "R'";
-            }
+
+            notation = "R'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 3) {
           if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "R2";
-            }
+            notation = "R2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 4) {
           if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "U";
-            }
+            notation = "U";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 5) {
           if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "U'";
-            }
+            notation = "U'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 6) {
           if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "U2";
-            }
+            notation = "U2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 7) {
           if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "F";
-            }
+            notation = "F";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 8) {
           if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "F'";
-            }
+            notation = "F'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 9) {
           if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "F2";
-            }
+            notation = "F2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 10) {
           if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "L";
-            }
+            notation = "L";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 11) {
           if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "L'";
-            }
+            notation = "L'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 12) {
           if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "L2";
-            }
+            notation = "L2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 13) {
           if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "D";
-            }
+            notation = "D";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 14) {
           if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "D'";
-            }
+            notation = "D'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 15) {
           if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "D2";
-            }
+            notation = "D2";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 16) {
           if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "B";
-            }
+            notation = "B";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 17) {
           if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "B'";
-            }
+            notation = "B'";
           } else {
             timesLooped--;
           }
         } else if (cubeScramble == 18) {
           if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
-            if (previousPreviousNotation == "R" && previousPreviousNotation == "R'" && previousPreviousNotation == "R2" && previousPreviousNotation == "L" && previousPreviousNotation == "L'" && previousPreviousNotation == "L2" && previousPreviousNotation == "U" && previousPreviousNotation == "U'" && previousPreviousNotation == "U2" && previousPreviousNotation == "D" && previousPreviousNotation == "D'" && previousPreviousNotation == "D2" && previousPreviousNotation == "F" && previousPreviousNotation == "F'" && previousPreviousNotation == "F2" && previousPreviousNotation == "B" && previousPreviousNotation == "B'" && previousPreviousNotation == "B2") {
-              notation = "B2";
-            }
+            notation = "B2";
           } else {
             timesLooped--;
           }
         }
-        
-        var previousPreviousNotation = previousNotation;
+
         var previousNotation = notation;
 
-        if (timesLooped === 1) {
+        if (timesLooped == 1) {
           moveOne = notation;
         } else if (timesLooped == 2) {
           moveTwo = notation;
@@ -311,7 +275,7 @@ module.exports = class cubeScrambleCommand extends Command {
       var moveThirtyFive;
       var moveThirtySix;
 
-      while (timesLooped != 36) {
+      while (timesLooped != 37) {
         var notation;
         var cubeScramble = Math.floor(Math.random() * 36) + 1;
 
@@ -533,12 +497,6 @@ module.exports = class cubeScrambleCommand extends Command {
           }
         }
 
-        if (previousNotation != null) {
-          var previousPreviousNotation = previousNotation;
-        } else {
-          var previousPreviousNotation;
-        }
-        
         var previousNotation = notation;
 
         if (timesLooped === 1) {
@@ -587,18 +545,224 @@ module.exports = class cubeScrambleCommand extends Command {
           moveTwentyTwo = notation;
         } else if (timesLooped == 23) {
           moveTwentyThree = notation;
+        } else if (timesLooped == 24) {
+          moveTwentyFour = notation;
+        } else if (timesLooped == 25) {
+          moveTwentyFive = notation;
+        } else if (timesLooped == 26) {
+          moveTwentySix = notation;
+        } else if (timesLooped == 27) {
+          moveTwentySeven = notation;
+        } else if (timesLooped == 28) {
+          moveTwentyEight = notation;
+        } else if (timesLooped == 29) {
+          moveTwentyNine = notation;
+        } else if (timesLooped == 30) {
+          moveThirty = notation;
+        } else if (timesLooped == 31) {
+          moveThirtyOne = notation;
+        } else if (timesLooped == 32) {
+          moveThirtyTwo = notation;
+        } else if (timesLooped == 33) {
+          moveThirtyThree = notation;
+        } else if (timesLooped == 34) {
+          moveThirtyFour = notation;
+        } else if (timesLooped == 35) {
+          moveThirtyFive = notation;
+        } else if (timesLooped == 36) {
+          moveThirtySix = notation;
         }
 
         timesLooped++;
       }
-      const Scramble3 = new discord.MessageEmbed()
+      const Scramble4 = new discord.MessageEmbed()
         .setTimestamp()
         .setColor("RANDOM")
         .setTitle("Scramble")
         .setDescription(
-          moveOne + ` ` + moveTwo + ` ` + moveThree + ` ` + moveFour + ` ` + moveFive + ` ` + moveSix + ` ` + moveSeven + ` ` + moveEight + ` ` + moveNine + ` ` + moveTen + ` ` + moveEleven + ` ` + moveTwelve + ` ` + moveThirteen + ` ` + moveFourteen + ` ` + moveFifteen + ` ` + moveSixteen + ` ` + moveSeventeen + ` ` + moveEighteen + ` ` + moveNineteen + ` ` + moveTwenty + ` ` + moveTwentyOne + ` ` + moveTwentyTwo + ` ` + moveTwentyThree
+          moveOne + ` ` + moveTwo + ` ` + moveThree + ` ` + moveFour + ` ` + moveFive + ` ` + moveSix + ` ` + moveSeven + ` ` + moveEight + ` ` + moveNine + ` ` + moveTen + ` ` + moveEleven + ` ` + moveTwelve + ` ` + moveThirteen + ` ` + moveFourteen + ` ` + moveFifteen + ` ` + moveSixteen + ` ` + moveSeventeen + ` ` + moveEighteen + ` ` + moveNineteen + ` ` + moveTwenty + ` ` + moveTwentyOne + ` ` + moveTwentyTwo + ` ` + moveTwentyThree + ` ` + moveTwentyFour + ` ` + moveTwentyFive + ` ` + moveTwentySix + ` ` + moveTwentySeven + ` ` + moveTwentyEight + ` ` + moveTwentyNine + ` ` + moveThirty + ` ` + moveThirtyOne + ` ` + moveThirtyTwo + ` ` + moveThirtyThree + ` ` + moveThirtyFour + ` ` + moveThirtyFive + ` ` + moveThirtySix
         )
-      message.channel.send(Scramble3);
+      message.channel.send(Scramble4);
+    } else if (reason == "2") {
+      var timesLooped = 0;
+
+      var moveOne;
+      var moveTwo;
+      var moveThree;
+      var moveFour;
+      var moveFive;
+      var moveSix;
+      var moveSeven;
+      var moveEight;
+      var moveNine;
+      var moveTen;
+      var moveEleven;
+      var moveTwelve;
+      var moveThirteen;
+      var moveFourteen;
+      var moveFifteen;
+      var moveSixteen;
+      var moveSeventeen;
+      var moveEighteen;
+      var moveNineteen;
+      var moveTwenty;
+      var moveTwentyOne;
+      var moveTwentyTwo;
+      var moveTwentyThree;
+
+      while (timesLooped != 13) {
+        var notation;
+        var cubeScramble = Math.floor(Math.random() * 18) + 1;
+
+        if (cubeScramble == 1) {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+            notation = "R";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 2) {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+
+            notation = "R'";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 3) {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+            notation = "R2";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 4) {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+            notation = "U";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 5) {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+            notation = "U'";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 6) {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+            notation = "U2";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 7) {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+            notation = "F";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 8) {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+            notation = "F'";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 9) {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+            notation = "F2";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 10) {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+            notation = "L";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 11) {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+            notation = "L'";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 12) {
+          if (previousNotation != "R" && previousNotation != "R'" && previousNotation != "R2" && previousNotation != "L" && previousNotation != "L'" && previousNotation != "L2") {
+            notation = "L2";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 13) {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+            notation = "D";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 14) {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+            notation = "D'";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 15) {
+          if (previousNotation != "U" && previousNotation != "U'" && previousNotation != "U2" && previousNotation != "D" && previousNotation != "D'" && previousNotation != "D2") {
+            notation = "D2";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 16) {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+            notation = "B";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 17) {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+            notation = "B'";
+          } else {
+            timesLooped--;
+          }
+        } else if (cubeScramble == 18) {
+          if (previousNotation != "F" && previousNotation != "F'" && previousNotation != "F2" && previousNotation != "B" && previousNotation != "B'" && previousNotation != "B2") {
+            notation = "B2";
+          } else {
+            timesLooped--;
+          }
+        }
+
+        var previousNotation = notation;
+
+        if (timesLooped == 1) {
+          moveOne = notation;
+        } else if (timesLooped == 2) {
+          moveTwo = notation;
+        } else if (timesLooped == 3) {
+          moveThree = notation;
+        } else if (timesLooped == 4) {
+          moveFour = notation;
+        } else if (timesLooped == 5) {
+          moveFive = notation;
+        } else if (timesLooped == 6) {
+          moveSix = notation;
+        } else if (timesLooped == 7) {
+          moveSeven = notation;
+        } else if (timesLooped == 8) {
+          moveEight = notation;
+        } else if (timesLooped == 9) {
+          moveNine = notation;
+        } else if (timesLooped == 10) {
+          moveTen = notation;
+        } else if (timesLooped == 11) {
+          moveEleven = notation;
+        } else if (timesLooped == 12) {
+          moveTwelve = notation;
+        }
+
+        timesLooped++;
+      }
+      const Scramble2 = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Scramble")
+        .setDescription(
+          moveOne + ` ` + moveTwo + ` ` + moveThree + ` ` + moveFour + ` ` + moveFive + ` ` + moveSix + ` ` + moveSeven + ` ` + moveEight + ` ` + moveNine + ` ` + moveTen + ` ` + moveEleven + ` ` + moveTwelve
+        )
+      message.channel.send(Scramble2);
     }
   }
 }
