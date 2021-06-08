@@ -1,5 +1,5 @@
 const { CommandoClient } = require("discord.js-commando"); // Refer to https://discord.js.org/#/docs/commando/master/general/welcome for help.
-const botData = require("./botData.js");// Imports custom botData information for the bot.
+const botData = require("./botData.js"); // Imports custom botData information for the bot.
 const discord = require("discord.js"); // Refer to https://discord.js.org/#/docs/main/stable/general/welcome for help.
 const token = require("./token.js"); // Imports the token key for the bot to launch.
 const StormDB = require("stormdb");
@@ -22,7 +22,7 @@ bot.registry
   .registerDefaultGroups()
   .registerDefaultCommands()
   .registerCommandsIn(path.join(__dirname, 'commands'));
-//End of command registration
+// End of command registration
 
 bot.login(key);
 
