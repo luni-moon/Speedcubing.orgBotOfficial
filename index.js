@@ -32,3 +32,73 @@ bot.on('ready', function () {
   console.log(`Bot Developer: ${Developer}`);
   console.log(`Running Version: ${Version}`);
 });
+
+bot.on('ready', function() {
+  var countdownToDCP = Number(12000000);
+
+  while (countdownToDCP >= 0) {
+    countdownToDCP--;
+
+    if (countdownToDCP == 0) {
+      countdownToDCP = Number(12000000);
+
+      var randomNumber = Math.floor(Math.random * 25) + 1;
+
+      if (randomNumber == 1) {
+
+      } else if (randomNumber == 2) {
+
+      } else if (randomNumber == 3) {
+
+      } else if (randomNumber == 4) {
+
+      } else if (randomNumber == 5) {
+        
+      } else if (randomNumber == 6) {
+
+      } else if (randomNumber == 7) {
+        
+      } else if (randomNumber == 8) {
+
+      } else if (randomNumber == 9) {
+
+      } else if (randomNumber == 10) {
+
+      } else if (randomNumber == 11) {
+        
+      } else if (randomNumber == 12) {
+
+      } else if (randomNumber == 13) {
+        
+      } else if (randomNumber == 14) {
+        
+      } else if (randomNumber == 15) {
+
+      } else if (randomNumber == 16) {
+
+      } else if (randomNumber == 17) {
+
+      } else if (randomNumber == 18) {
+
+      } else if (randomNumber == 19) {
+
+      } else if (randomNumber == 20) {
+
+      } else if (randomNumber == 21) {
+
+      } else if (randomNumber == 22) {
+
+      } else if (randomNumber == 23) {
+        
+      }
+
+      DCP = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("**DEAD CHAT PING**")
+        .setDescription(`
+        
+        `)
+    }
+  }
+});

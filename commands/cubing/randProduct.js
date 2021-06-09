@@ -3,7 +3,7 @@ const botData = require("../../botData.js");
 const discord = require("discord.js");
 const StormDB = require("stormdb");
 const engine = new StormDB.localFileEngine("./db.stormdb");
-const db = StormDB(engine);
+const db = new StormDB(engine);
 
 
 module.exports = class randProductCommand extends Command {
