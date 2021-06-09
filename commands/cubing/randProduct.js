@@ -330,17 +330,233 @@ module.exports = class randProductCommand extends Command {
         `)
       message.channel.send(Random7X7ProductLink);
     } else if (reason == "sidewca pyraminx" || reason == "sidewca Pyraminx" || reason == "sidewca pyra" || reason == "sidewca Pyra") {
+      var randomNumber = Math.floor(Math.random() * 12) + 1;
+      var randomProductLink = "";
 
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/moyu-mofang-jiaoshi-meilong-pyraminx";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/qiyi-ms-pyraminx";
+      }  else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/gan-pyraminx-standard";
+      } else if (randomNumber == 4) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/qiyi-xman-bell-v2m-pyraminx";
+      } else if (randomNumber == 5) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/gan-pyraminx-enhanced";
+      } else if (randomNumber == 6) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/gan-pyraminx-explorer";
+      } else if (randomNumber == 7) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/moyu-meilong-pyraminx-m";
+      } else if (randomNumber == 8) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/x-man-bell-pyraminx";
+      } else if (randomNumber == 9) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/moyu-mofang-jiaoshi-meilong-pyraminx-macaron-edition";
+      } else if (randomNumber == 10) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/shengshou-mr-m-pyraminx";
+      } else if (randomNumber == 11) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/yj-yulong-v2m-pyraminx";
+      } else if (randomNumber == 12) {
+        randomProductLink = "https://speedcubing.org/collections/pyraminx/products/monstergo-pyraminx";
+      }
+
+      const RandomPyraminxProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Pyraminx Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+        message.channel.send(RandomPyraminxProductLink);
     } else if (reason == "sidewca skewb" || reason == "sidewca Skewb" || reason == "sidewca sk" || reason == "sidewca Sk") {
+      var randomNumber = Math.floor(Math.random() * 6) + 1;
+      var randomProductLink = "";
 
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/skewb/products/moyu-mofang-jiaoshi-meilong-skewb";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/skewb/products/gan-skewb-enhanced";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/skewb/products/qiyi-x-man-wingy-skewb";
+      } else if (randomNumber == 4) {
+        randomProductLink = "https://speedcubing.org/collections/skewb/products/moyu-aoyan-m-skewb";
+      } else if (randomNumber == 5) {
+        randomProductLink = "https://speedcubing.org/collections/skewb/products/gan-skewb-m";
+      } else if (randomNumber == 6) {
+        randomProductLink = "https://speedcubing.org/collections/skewb/products/monster-go-skewb";
+      }
+
+      const RandomSkewbProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Skewb Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomSkewbProductLink);
     } else if (reason == "sidewca megaminx" || reason == "sidewca Megaminx" || reason == "sidewca mega" || reason == "sidewca Mega") {
+      var randomNumber = Math.floor(Math.random() * 9) + 1;
+      var randomProductLink = "";
 
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/yj-yuhu-v2m-megaminx";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/yj-mgc-megaminx";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/moyu-mofang-jiaoshi-meilong-megaminx";
+      } else if (randomNumber == 4) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/dayan-megaminx-v2m";
+      } else if (randomNumber == 5) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/gan-megaminx";
+      } else if (randomNumber == 6) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/shengshou-mrm-megaminx";
+      } else if (randomNumber == 7) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/qiyi-x-man-galaxy-v2m-sculpted";
+      } else if (randomNumber == 8) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/moyu-meilong-megaminx-m";
+      } else if (randomNumber == 9) {
+        randomProductLink = "https://speedcubing.org/collections/megaminx/products/moyu-aohun-wrm-megaminx";
+      }
+
+      const RandomMegaminxProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Megaminx Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomMegaminxProductLink);
     } else if (reason == "sidewca square-1" || reason == "sidewca Square-1" || reason == "sidewca sq-1" || reason == "sidewca Sq-1") {
+      var randomNumber = Math.floor(Math.random() * 4) + 1;
+      var randomProductLink = "";
 
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/square-1/products/moyu-meilong-square-one";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/square-1/products/pre-order-qiyi-xman-volt-v2m";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/square-1/products/yuxin-little-magic-square-1m";
+      } else if (randomNumber == 4) {
+        randomProductLink = "https://speedcubing.org/collections/square-1/products/yj-mgc-square-1";
+      }
+
+      const RandomSquareOneProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Square-1 Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomSquareOneProductLink);
     } else if (reason == "sidewca clock" || reason == "sidewca Clock" || reason == "sidewca cloncc" || reason == "sidewca Cloncc") {
+      var randomNumber = Math.floor(Math.random() * 3) + 1;
+      var randomProductLink = "";
 
-    } else if (reason == "nonwca") {
-      
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/clocks/products/qiyi-magnetic-clock";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/clocks/products/shengshou-magnetic-clock-pre-order";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/clocks/products/lingao-clock";
+      }
+
+      const RandomClockProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Clock Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomClockProductLink);
+    } else if (reason == "nonwca" || reason == "NonWCA") {
+      var randomNumber = Math.floor(Math.random() * 13) + 1;
+      var randomProductLink = "";
+
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/lanlan-face-turning-octahedron";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-2x2x3-cuboid";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-2x3x3-cube";
+      } else if (randomNumber == 4) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-meilong-rediminx";
+      } else if (randomNumber == 5) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-puppet-2";
+      } else if (randomNumber == 6) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-puppet-1";
+      } else if (randomNumber == 7) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/yj-yeet-ball";
+      } else if (randomNumber == 8) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-mofang-jiaoshi-mastermorphix";
+      } else if (randomNumber == 9) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-meilong-kibiminx";
+      } else if (randomNumber == 10) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-3x3x3-fisher-cube-1";
+      } else if (randomNumber == 11) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-duomo-pyraminx";
+      } else if (randomNumber == 12) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-3x3x3-fisher-cube";
+      } else if (randomNumber == 13) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-magnetic-15-puzzle";
+      }
+
+      const RandomNonWCAProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Non-WCA Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomNonWCAProductLink);
+    } else if (reason == "accessories" || reason == "access" || reason == "Accessories" || reason == "Access") {
+      var randomNumber = Math.floor(Math.random() * 13) + 1;
+      var randomProductLink = "";
+
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/accessories/products/qiyi-speedcubing-timer";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/accessories/products/4x1-5mm-magnets";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/accessories/products/4x1-magnets";
+      }
+
+      const RandomAccessoriesProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Accessory Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomAccessoriesProductLink);
+    } else if (reason == "neutrino" || reason == "Neutrino") {
+      var randomNumber = Math.floor(Math.random() * 8) + 1;
+      var randomProductLink = "";
+
+      if (randomNumber == 1) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/neutrino-moyu-rs3m-2020";
+      } else if (randomNumber == 2) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/magnetic-meilong-3x3x3";
+      } else if (randomNumber == 3) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/muon-moyu-rs3m-2020";
+      } else if (randomNumber == 4) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/neutrino-qiyi-ms-3x3x3";
+      } else if (randomNumber == 5) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/neutrino-yuxin-little-magic-3x3x3-m";
+      } else if (randomNumber == 6) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/neutrino-yj-mgc-5x5x5";
+      } else if (randomNumber == 7) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/neutrino-yj-mgc-6x6x6";
+      } else if (randomNumber == 8) {
+        randomProductLink = "https://speedcubing.org/collections/custom-collection/products/neutrino-dayan-guhong-v4m";
+      }
+
+      const RandomNeutrinoProductLink = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("RANDOM")
+        .setTitle("Random Neutrino Product:")
+        .setDescription(`
+          ${randomProductLink}
+        `)
+      message.channel.send(RandomNeutrinoProductLink);
     }
   }
 }
