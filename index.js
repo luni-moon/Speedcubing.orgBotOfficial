@@ -34,6 +34,7 @@ bot.on('ready', function () {
 });
 
 bot.on('ready', function() {
+  var PingChannel = bot.channels.cache.get(DCPPingChannelID);
   var countdownToDCP = Number(12000000);
 
   while (countdownToDCP >= 0) {
@@ -96,14 +97,15 @@ bot.on('ready', function() {
         DCPQuestion = "What is the highest order NxN puzzle you have?";
       }
 
-      DCP = new discord.MessageEmbed()
-        .setTimestamp()
-        .setColor("RANDOM")
-        .setTitle("**DEAD CHAT PING**")
-        .setDescription(`
-          ${DCPQuestion}
-        `)
-        message.channel.send(DCP);
+      
+        DCP = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("RANDOM")
+          .setTitle("**DEAD CHAT PING**")
+          .setDescription(`
+            ${DCPQuestion}
+          `)
+        PingChannel.send(DCP);
     }
   }
 });

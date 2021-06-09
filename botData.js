@@ -22,4 +22,7 @@ var BotConfiguration = [
   // ---------- Bot Configuration ----------
   botPrefix = "$",
   activityMessage = "The Official Bot for the Speedcubing.org Discord Server - https://www.speedcubing.org/",
+
+  // ---------- Channel Configuration ----------
+  DCPPingChannelID = "827689476603641856"
 ];
