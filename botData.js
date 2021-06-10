@@ -14,7 +14,7 @@ var BotData = [
   DeveloperGitHub = "Lukas-Batema",
   // My GitHub Profile
   
-  DeveloperBusiness = "BatemaDevelopment"
+  DeveloperBusiness = "BatemaDevelopment",
   // My Small Business
 ];
 
@@ -23,6 +23,7 @@ var BotConfiguration = [
   botPrefix = "$",
   activityMessage = "The Official Bot for the Speedcubing.org Discord Server - https://www.speedcubing.org/",
 
-  // ---------- Channel Configuration ----------
-  DCPPingChannelID = "827689476603641856"
+  // ---------- DCP Configuration ----------
+  DCPPingChannelID = "827689476603641856",
+  DCPTime = "6",
 ];
