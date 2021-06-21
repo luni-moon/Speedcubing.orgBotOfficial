@@ -1,0 +1,183 @@
+const { Command } = require('discord.js-commando');
+const botData = require("../../botData.js");
+const discord = require("discord.js");
+
+const StormDB = require("stormdb");
+const engine = new StormDB.localFileEngine("./db.stormdb", {
+  async: true
+});
+const db = new StormDB(engine);
+
+module.exports = class SettingsCommand extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'settings',
+      group: 'admin',
+      memberName: 'settings',
+      description: 'Configure the Bot\'s Settings!',
+    });
+  }
+
+  run(message, args) {
+    if (message.guild === null) {
+      message.reply(DMMessage);
+      return;
+    } else if (!message.member.hasPermission("ADMINISTRATOR")) {
+      const PermissionErrorMessage = new discord.MessageEmbed()
+        .setColor("#FF0000")
+        .setDescription(`${PermissionError}`)
+      message.channel.send(PermissionErrorMessage).then(message => {
+        message.delete({timeout: 60000})
+      });
+      return;
+    }
+  
+    let words = args.split(' ');
+    let reason = words.slice(0).join(' ');
+
+    if (reason == "help" || !reason) {
+      const BotSettingsHelp = new discord.MessageEmbed()
+        .setColor("0xFFA500")
+        .setTimestamp()
+        .setTitle("**BOT SETTINGS HELP**")
+        .addField("Features Available: ", 
+          `
+            These are the toggleable features! The names in parentheses are nicknames:
+            1. Auto Moderation (am)
+            2. Dead Chat Pings (dcp)
+            3. Ranking System (rs)
+          `
+        )
+        .addField("Toggle Settings On: ", 
+          `
+            To toggle a setting on, do £settings (Settings Name Above) on
+            Example: £settings dcp on
+          `
+        )
+        .addField("Toggle Settings Off: ", 
+          `
+            To toggle a setting on, do £settings (Settings Name Above) off
+            Example: £settings dcp off
+          `
+        )
+      message.channel.send(BotSettingsHelp);
+    }  else if (reason == "am on") {
+      if (db.get("Settings").get([0]).get("AutoModerationSetting").value() == 1) {
+        return message.reply("Sorry, this setting is already toggled on.");
+      } else {
+        db.get("Settings").get([0]).get("AutoModerationSetting").set(1);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+
+        const AMOnMSG = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("#008000")
+          .setTitle("Toggled On: Auto Moderation")
+        message.channel.send(AMOnMSG);
+        return;
+      }
+    } else if (reason == "am off") {
+      if (db.get("Settings").get([0]).get("AutoModerationSetting").value() == 0) {
+        return message.reply("Sorry, this setting is already toggled off.");
+      } else {
+        db.get("Settings").get([0]).get("AutoModerationSetting").set(0);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+
+        const AMOffMSG = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("#FF0000")
+          .setTitle("Toggled Off: Auto Moderation")
+        message.channel.send(AMOffMSG);
+        return;
+      }
+    } else if (reason == "dcp on") {
+      if (db.get("Settings").get([0]).get("DCPSetting").value() == 1) {
+        return message.reply("Sorry, this setting is already toggled on.");
+      } else {
+        db.get("Settings").get([0]).get("DCPSetting").set(1);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+
+        const DCPOnMSG = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("#008000")
+          .setTitle("Toggled On: Dead Chat Pings")
+        message.channel.send(DCPOnMSG);
+        return;
+      }
+    } else if (reason == "dcp off") {
+      if (db.get("Settings").get([0]).get("DCPSetting").value() == 0) {
+        return message.reply("Sorry, this setting is already toggled off.");
+      } else {
+        db.get("Settings").get([0]).get("DCPSetting").set(0);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+
+        const DCPOffMSG = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("#FF0000")
+          .setTitle("Toggled Off: Dead Chat Pings")
+        message.channel.send(DCPOffMSG);
+        return;
+      }
+    } else if (reason == "rs on") {
+      if (db.get("Settings").get([0]).get("RankUpSetting").value() == 1) {
+        return message.reply("Sorry, this setting is already toggled on.");
+      } else {
+        db.get("Settings").get([0]).get("RankUpSetting").set(1);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+
+        const RSOnMSG = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("#008000")
+          .setTitle("Toggled On: Ranking System")
+        message.channel.send(RSOnMSG);
+        return;
+      }
+    } else if (reason == "rs off") {
+      if (db.get("Settings").get([0]).get("RankUpSetting").value() == 0) {
+        return message.reply("Sorry, this setting is already toggled off.");
+      } else {
+        db.get("Settings").get([0]).get("RankUpSetting").set(0);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+
+        const RSOffMSG = new discord.MessageEmbed()
+          .setTimestamp()
+          .setColor("#008000")
+          .setTitle("Toggled On: Ranking System")
+        message.channel.send(RSOffMSG);
+        return;
+      }
+    } else if (reason == "dcptime") {
+      if (db.get("Settings").get([0]).get("DCPTimeSetting").value() == 10) {
+        db.get("Settings").get([0]).get("DCPTimeSetting").set(1);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+      } else {
+        var NewDCPTime = db.get("Settings").get([0]).get("DCPTimeSetting").value() + 1;
+        db.get("Settings").get([0]).get("DCPTimeSetting").set(NewDCPTime);
+        db.save().then(function() {
+          console.log("Finished Saving Database!");
+        });
+      }
+
+
+      const DCPTimeChangeMSG = new discord.MessageEmbed()
+        .setTimestamp()
+        .setColor("#008000")
+        .setTitle("Dead Chat Time: One Hour Added (Up to 10 hours, cycles time back to 1 hour, at 11 hours)")
+      message.channel.send(DCPTimeChangeMSG);
+      return;
+    }
+  }
+}
