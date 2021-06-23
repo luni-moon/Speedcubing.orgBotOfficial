@@ -46,6 +46,7 @@ module.exports = class SettingsCommand extends Command {
             1. Auto Moderation (am)
             2. Dead Chat Pings (dcp)
             3. Ranking System (rs)
+            4. Dead Chat Ping Timing (dcpt)
           `
         )
         .addField("Toggle Settings On: ", 
@@ -60,6 +61,12 @@ module.exports = class SettingsCommand extends Command {
             Example: £settings dcp off
           `
         )
+        .addField("Change Time Interval For Dead Chat Pings: ",
+          `
+            The command for changing the time interval between Dead Chat Pings, is different then most other settings for this bot. It cycles through numbers 1 to 6, which those numbers represent the hours between pings, after using this command. After reaching the 6 hour setting, it loops all the way back to 1. 
+            Example: £settings dcpt
+          `
+        )
       message.channel.send(BotSettingsHelp);
     }  else if (reason == "am on") {
       if (db.get("Settings").get([0]).get("AutoModerationSetting").value() == 1) {
@@ -68,6 +75,7 @@ module.exports = class SettingsCommand extends Command {
         db.get("Settings").get([0]).get("AutoModerationSetting").set(1);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("AM Setting was enabled.");
         });
 
         const AMOnMSG = new discord.MessageEmbed()
@@ -84,6 +92,7 @@ module.exports = class SettingsCommand extends Command {
         db.get("Settings").get([0]).get("AutoModerationSetting").set(0);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("AM Setting was disabled.");
         });
 
         const AMOffMSG = new discord.MessageEmbed()
@@ -100,6 +109,7 @@ module.exports = class SettingsCommand extends Command {
         db.get("Settings").get([0]).get("DCPSetting").set(1);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("DCP Setting was enabled.");
         });
 
         const DCPOnMSG = new discord.MessageEmbed()
@@ -116,6 +126,7 @@ module.exports = class SettingsCommand extends Command {
         db.get("Settings").get([0]).get("DCPSetting").set(0);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("DCP Setting was disabled.");
         });
 
         const DCPOffMSG = new discord.MessageEmbed()
@@ -132,6 +143,7 @@ module.exports = class SettingsCommand extends Command {
         db.get("Settings").get([0]).get("RankUpSetting").set(1);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("RS Setting was enabled.");
         });
 
         const RSOnMSG = new discord.MessageEmbed()
@@ -148,6 +160,7 @@ module.exports = class SettingsCommand extends Command {
         db.get("Settings").get([0]).get("RankUpSetting").set(0);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("RS Setting was disabled.");
         });
 
         const RSOffMSG = new discord.MessageEmbed()
@@ -158,16 +171,18 @@ module.exports = class SettingsCommand extends Command {
         return;
       }
     } else if (reason == "dcptime") {
-      if (db.get("Settings").get([0]).get("DCPTimeSetting").value() == 10) {
+      if (db.get("Settings").get([0]).get("DCPTimeSetting").value() < 7) {
         db.get("Settings").get([0]).get("DCPTimeSetting").set(1);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("DCPT Setting Updated to 1 Hour.");
         });
       } else {
         var NewDCPTime = db.get("Settings").get([0]).get("DCPTimeSetting").value() + 1;
         db.get("Settings").get([0]).get("DCPTimeSetting").set(NewDCPTime);
         db.save().then(function() {
           console.log("Finished Saving Database!");
+          console.log("DCPT Setting Updated to " + String(NewDCPTime) + " Hours.");
         });
       }
 
@@ -175,7 +190,7 @@ module.exports = class SettingsCommand extends Command {
       const DCPTimeChangeMSG = new discord.MessageEmbed()
         .setTimestamp()
         .setColor("#008000")
-        .setTitle("Dead Chat Time: One Hour Added (Up to 10 hours, cycles time back to 1 hour, at 11 hours)")
+        .setTitle("Dead Chat Time: 1 Hour Added")
       message.channel.send(DCPTimeChangeMSG);
       return;
     }

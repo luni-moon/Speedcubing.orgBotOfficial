@@ -33,15 +33,16 @@ bot.on('ready', function () {
   console.log(`Running Version: ${Version}`);
 });
 
-/* const setting = 1;
+db.default( { Settings: [ { AutoModerationSetting: 0, DCPSetting: 0, RankUpSetting: 0, DCPTimeSetting: 0} ] } );
+db.save();
 
 bot.on('ready', () => {
   setInterval(() => {
-    if (setting == 0) {
+    if (db.get("Settings").get([0]).get("DCPSetting").value() == 0) {
       return;
     } else {
     var PingChannel = bot.channels.cache.get(DCPPingChannelID);
-    var randomNumber = Math.floor(Math.random * 25) + 1;
+    var randomNumber = Math.floor(Math.random() * 25) + 1;
 
     if(randomNumber == 1){var DCPQuestion = "What is your favourite WCA event?"};
     if(randomNumber == 2){var DCPQuestion = "What is your 3x3 Main?"};
@@ -76,6 +77,11 @@ bot.on('ready', () => {
       .setDescription(DCPQuestion)
       PingChannel.send(DCP);
     }
-  }, 1000, 1, 1);
+
+    function DCP(message){
+      PingChannel.send(`Dead Chat Ping! <@&${DCPRoleID}>`);
+    }
+
+    DCP();
+  }, 1000 * 60 * 60 * db.get("Settings").get([0]).get("DCPTimeSetting").value());
 });
-*/

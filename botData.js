@@ -1,8 +1,8 @@
 var BotData = [
-  Version = "0.0.1",
+  Version = "1.0.0",
   // Running Version
 
-  VN = "0.0.1 - The Beginning of the Bot as we Know it", 
+  VN = "1.0.0 - The DB Update", 
   // VN stands for Version Name
 
   Developer = "GameHogPlays#0119 | Lukas Batema | BatemaDevelopment",
@@ -20,10 +20,11 @@ var BotData = [
 
 var BotConfiguration = [
   // ---------- Bot Configuration ----------
-  botPrefix = "$",
-  activityMessage = "The Official Bot for the Speedcubing.org Discord Server - https://www.speedcubing.org/",
+  botPrefix = "£",
+  activityMessage = "The Official Bot for the Speedcubing.org Discord Server!",
 
   // ---------- DCP Configuration ----------
   DCPPingChannelID = "827689476603641856",
+  DCPRoleID = "855231828704755712",
   DCPTime = "6",
 ];
