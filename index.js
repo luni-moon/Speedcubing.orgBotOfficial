@@ -2,9 +2,13 @@ const { CommandoClient } = require("discord.js-commando"); // Refer to https://d
 const botData = require("./botData.js"); // Imports custom botData information for the bot.
 const discord = require("discord.js"); // Refer to https://discord.js.org/#/docs/main/stable/general/welcome for help.
 const token = require("./token.js"); // Imports the token key for the bot to launch.
+
 const StormDB = require("stormdb");
-const engine = new StormDB.localFileEngine("./db.stormdb");
+const engine = new StormDB.localFileEngine("./db.stormdb", {
+  async: true
+});
 const db = new StormDB(engine);
+
 const path = require("path");
 
 const bot = new CommandoClient({
@@ -34,7 +38,9 @@ bot.on('ready', function () {
 });
 
 db.default( { Settings: [ { AutoModerationSetting: 0, DCPSetting: 0, RankUpSetting: 0, DCPTimeSetting: 1} ] } );
-db.save();
+db.save().then(function() {
+  console.log("Finished Saving Database!");
+});
 
 bot.on('guildMemberAdd', member => {
   const NewMemberMessage = new discord.MessageEmbed()
