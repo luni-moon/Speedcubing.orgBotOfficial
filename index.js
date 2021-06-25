@@ -33,8 +33,21 @@ bot.on('ready', function () {
   console.log(`Running Version: ${Version}`);
 });
 
-db.default( { Settings: [ { AutoModerationSetting: 0, DCPSetting: 0, RankUpSetting: 0, DCPTimeSetting: 0} ] } );
+db.default( { Settings: [ { AutoModerationSetting: 0, DCPSetting: 0, RankUpSetting: 0, DCPTimeSetting: 1} ] } );
 db.save();
+
+bot.on('guildMemberAdd', member => {
+  const NewMemberMessage = new discord.MessageEmbed()
+      .setColor("RANDOM")
+      .setTimestamp()
+      .setThumbnail(member.user.displayAvatarURL())
+      .setTitle(`Welcome to ${member.guild.name}, ${member.user.tag}!`)
+      .addField("Information:", `
+          :shopping_cart: https://www.speedcubing.org/
+      `)
+  let NewMemberChannel = member.guild.channels.cache.get(WelcomeChannelID);
+  NewMemberChannel.send(NewMemberMessage);
+});
 
 bot.on('ready', () => {
   setInterval(() => {
@@ -83,5 +96,5 @@ bot.on('ready', () => {
     }
 
     DCP();
-  }, 1000 * 60 * 60 * db.get("Settings").get([0]).get("DCPTimeSetting").value());
+  }, 1000 * 60 * 60 * Number(db.get("Settings").get([0]).get("DCPTimeSetting").value()));
 });

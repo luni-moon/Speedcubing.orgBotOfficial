@@ -27,4 +27,7 @@ var BotConfiguration = [
   DCPPingChannelID = "827689476603641856",
   DCPRoleID = "855231828704755712",
   DCPTime = "6",
+
+  // ---------- Channel Congiguration ----------
+  WelcomeChannelID = "827689439940575233",
 ];

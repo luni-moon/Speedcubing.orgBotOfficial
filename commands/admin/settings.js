@@ -170,8 +170,8 @@ module.exports = class SettingsCommand extends Command {
         message.channel.send(RSOffMSG);
         return;
       }
-    } else if (reason == "dcptime") {
-      if (db.get("Settings").get([0]).get("DCPTimeSetting").value() < 7) {
+    } else if (reason == "dcpt") {
+      if (db.get("Settings").get([0]).get("DCPTimeSetting").value() > 6) {
         db.get("Settings").get([0]).get("DCPTimeSetting").set(1);
         db.save().then(function() {
           console.log("Finished Saving Database!");
@@ -194,5 +194,37 @@ module.exports = class SettingsCommand extends Command {
       message.channel.send(DCPTimeChangeMSG);
       return;
     }
+
+    if (db.get("Settings").get([0]).get("AutoModerationSetting").value() == 1) {
+      var AModeration = ":white_check_mark: ON";
+    } else {
+      AModeration = ":x: OFF";
+    }
+
+    if (db.get("Settings").get([0]).get("DCPSetting").value() == 1) {
+      var DCPings = ":white_check_mark: ON";
+    } else {
+      DCPings = ":x: OFF";
+    }
+
+    if (db.get("Settings").get([0]).get("RankUpSetting").value() == 1) {
+      var RSystem = ":white_check_mark: ON";
+    } else {
+      RSystem = ":x: OFF";
+    }
+
+    if (db.get("Settings").get([0]).get("DCPTimeSetting").value() < 7) {
+      var DCPTime = String(Number(db.get("Settings").get([0]).get("DCPTimeSetting").value())) + " Hour(s) Between Dead Chat Pings";
+    }
+
+    const BotSettingsOverview = new discord.MessageEmbed()
+      .setColor("0xFFA500")
+      .setTimestamp()
+      .setTitle("Bot Settings Overview")
+      .addField("Auto Moderation: ", AModeration)
+      .addField("Dead Chat Pings: ", DCPings)
+      .addField("Ranking System: ", RSystem)
+      .addField("Dead Chat Ping Time: ", DCPTime)
+    message.channel.send(BotSettingsOverview);
   }
 }
