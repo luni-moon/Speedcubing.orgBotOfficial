@@ -24,10 +24,10 @@ var BotConfiguration = [
   activityMessage = "The Official Bot for the Speedcubing.org Discord Server!",
 
   // ---------- DCP Configuration ----------
-  DCPPingChannelID = "695955224397086721",
-  DCPRoleID = "863885273561169929",
+  DCPPingChannelID = "827689476603641856",
+  DCPRoleID = "855231828704755712",
   DCPTime = "6",
 
   // ---------- Channel Congiguration ----------
-  WelcomeChannelID = "863886027630051348",
+  WelcomeChannelID = "827689439940575233",
 ];
