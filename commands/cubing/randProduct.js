@@ -31,7 +31,7 @@ module.exports = class randProductCommand extends Command {
         `)
         message.channel.send(RandProductHelp);
     } else if (reason == "nxn 3x3" || reason == "NxN 3x3" || reason == "NXN 3x3") {
-      var randomNumber = Math.floor(Math.random() * 53) + 1;
+      var randomNumber = Math.floor(Math.random() * 58) + 1;
       var randomProductLink = "";
 
       if (randomNumber == 1) {
@@ -63,7 +63,7 @@ module.exports = class randProductCommand extends Command {
       } else if (randomNumber == 14) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-mofang-jiaoshi-meilong-3x3x3";
       } else if (randomNumber == 15) {
-        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-weilong-gts3m"
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-weilong-gts3m";
       } else if (randomNumber == 16) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/mgc-elite-3x3";
       } else if (randomNumber == 17) {
@@ -99,47 +99,55 @@ module.exports = class randProductCommand extends Command {
       } else if (randomNumber == 32) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/yuxin-little-magic-3x3x3";
       } else if (randomNumber == 33) {
-        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/copy-of-monstergo-pyraminx";
-      } else if (randomNumber == 34) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-mofang-jiaoshi-meilong-3x3x3-macaron-edition";
-      } else if (randomNumber == 35) {
+      } else if (randomNumber == 34) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-weilong-wrm";
-      } else if (randomNumber == 36) {
+      } else if (randomNumber == 35) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-meilong-30mm-keychain-cube";
+      } else if (randomNumber == 36) {
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-cubing-classroom-45mm-keychain-cube";
       } else if (randomNumber == 37) {
-        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/copy-of-moyu-cubing-classroom-35mm-keychain-cube";
-      } else if (randomNumber == 38) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/mscube-ms3v1-standard";
-      } else if (randomNumber == 39) {
+      } else if (randomNumber == 38) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/diansheng-3x3x3-m";
-      } else if (randomNumber == 40) {
+      } else if (randomNumber == 39) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/qiyi-3cm-3x3x3";
-      } else if (randomNumber == 41) {
+      } else if (randomNumber == 40) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/monstergo-3x3x3";
-      } else if (randomNumber == 42) {
+      } else if (randomNumber == 41) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/qiyi-sail-w";
-      } else if (randomNumber == 43) {
+      } else if (randomNumber == 42) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/mscube-ms3v1-enhanced";
-      } else if (randomNumber == 44) {
+      } else if (randomNumber == 43) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/gan-356x";
-      } else if (randomNumber == 45) {
+      } else if (randomNumber == 44) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-meilong-3x3x3-m";
-      } else if (randomNumber == 46) {
+      } else if (randomNumber == 45) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-weilong-wrm-2020";
-      } else if (randomNumber == 47) {
+      } else if (randomNumber == 46) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/qiyi-wuwei-m";
-      } else if (randomNumber == 48) {
+      } else if (randomNumber == 47) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/dayan-tengyun-3x3x3-m";
-      } else if (randomNumber == 49) {
+      } else if (randomNumber == 48) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/gan-11-m-pro-uv-coated";
-      } else if (randomNumber == 50) {
+      } else if (randomNumber == 49) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/gan-356-i-carry";
-      } else if (randomNumber == 51) {
+      } else if (randomNumber == 50) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/yj-yulong-v2m";
-      } else if (randomNumber == 52) {
+      } else if (randomNumber == 51) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/gan-356-i-v2-bluetooth-3x3x3";
-      } else if (randomNumber == 53) {
+      } else if (randomNumber == 52) {
         randomProductLink = "https://speedcubing.org/collections/3x3x3/products/gan-i-play-v2";
+      } else if (randomNumber == 53) {
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/gan-354-v2m";
+      } else if (randomNumber == 54) {
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/fanxin-colour-brick-3x3x3";
+      } else if (randomNumber == 55) {
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/moyu-weilong-wrm-2021";
+      } else if (randomNumber == 56) {
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/monstergo-3x3x3-m";
+      } else if (randomNumber == 57) {
+        randomProductLink = "https://speedcubing.org/collections/3x3x3/products/qiyi-6-0cm-sail-3x3x3";
       }
 
 
@@ -152,11 +160,11 @@ module.exports = class randProductCommand extends Command {
         `)
         message.channel.send(Random3X3ProductLink);
     } else if (reason == "nxn 2x2" || reason == "NxN 2x2" || reason == "NXN 2x2") {
-      var randomNumber = Math.floor(Math.random() * 18) + 1;
+      var randomNumber = Math.floor(Math.random() * 19) + 1;
       var randomProductLink = "";
 
       if (randomNumber == 1) {
-        randomProductLink = "https://speedcubing.org/collections/2x2x2/products/gan-251-m-leap-pre-order";
+        randomProductLink = "https://speedcubing.org/collections/2x2x2/products/gan-251-m-leap";
       } else if (randomNumber == 2) {
         randomProductLink = "https://speedcubing.org/collections/2x2x2/products/monster-go-2x2x2";
       } else if (randomNumber == 3) {
@@ -191,6 +199,8 @@ module.exports = class randProductCommand extends Command {
         randomProductLink = "https://speedcubing.org/collections/2x2x2/products/qiyi-valk-2m";
       } else if (randomNumber == 18) {
         randomProductLink = "https://speedcubing.org/collections/2x2x2/products/moyu-mofang-jiaoshi-meilong-2x2x2-macaron-edition";
+      } else if (randomNumber == 19) {
+        randomProductLink = "https://speedcubing.org/collections/2x2x2/products/qiyi-valk-2m";
       }
 
       const Random2X2ProductLink = new discord.MessageEmbed()
@@ -454,7 +464,7 @@ module.exports = class randProductCommand extends Command {
       if (randomNumber == 1) {
         randomProductLink = "https://speedcubing.org/collections/clocks/products/qiyi-magnetic-clock";
       } else if (randomNumber == 2) {
-        randomProductLink = "https://speedcubing.org/collections/clocks/products/shengshou-magnetic-clock-pre-order";
+        randomProductLink = "https://speedcubing.org/collections/clocks/products/shengshou-magnetic-clock";
       } else if (randomNumber == 3) {
         randomProductLink = "https://speedcubing.org/collections/clocks/products/lingao-clock";
       }
@@ -468,7 +478,7 @@ module.exports = class randProductCommand extends Command {
         `)
       message.channel.send(RandomClockProductLink);
     } else if (reason == "nonwca" || reason == "NonWCA") {
-      var randomNumber = Math.floor(Math.random() * 13) + 1;
+      var randomNumber = Math.floor(Math.random() * 14) + 1;
       var randomProductLink = "";
 
       if (randomNumber == 1) {
@@ -497,6 +507,8 @@ module.exports = class randProductCommand extends Command {
         randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-3x3x3-fisher-cube";
       } else if (randomNumber == 13) {
         randomProductLink = "https://speedcubing.org/collections/non-wca/products/qiyi-magnetic-15-puzzle";
+      } else if (randomNumber == 14) {
+        randomProductLink = "https://speedcubing.org/collections/non-wca/products/moyu-meilong-container-puzzle";
       }
 
       const RandomNonWCAProductLink = new discord.MessageEmbed()
