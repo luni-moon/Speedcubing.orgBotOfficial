@@ -195,25 +195,25 @@ module.exports = class SettingsCommand extends Command {
       return;
     }
 
-    if (db.get("Settings").get([0]).get("AutoModerationSetting").value() == 1) {
+    if (db.get("Settings").get([0]).get("AutoModerationSetting") == 1) {
       var AModeration = ":white_check_mark: ON";
     } else {
       AModeration = ":x: OFF";
     }
 
-    if (db.get("Settings").get([0]).get("DCPSetting").value() == 1) {
+    if (db.get("Settings").get([0]).get("DCPSetting") == 1) {
       var DCPings = ":white_check_mark: ON";
     } else {
       DCPings = ":x: OFF";
     }
 
-    if (db.get("Settings").get([0]).get("RankUpSetting").value() == 1) {
+    if (db.get("Settings").get([0]).get("RankUpSetting") == 1) {
       var RSystem = ":white_check_mark: ON";
     } else {
       RSystem = ":x: OFF";
     }
 
-    if (db.get("Settings").get([0]).get("DCPTimeSetting").value() < 7) {
+    if (db.get("Settings").get([0]).get("DCPTimeSetting") < 7) {
       var DCPTime = String(Number(db.get("Settings").get([0]).get("DCPTimeSetting").value())) + " Hour(s) Between Dead Chat Pings";
     }
 

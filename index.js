@@ -1,8 +1,7 @@
 const { CommandoClient } = require("discord.js-commando"); // Refer to https://discord.js.org/#/docs/commando/master/general/welcome for help.
 const botData = require("./botData.js"); // Imports custom botData information for the bot.
 const discord = require("discord.js"); // Refer to https://discord.js.org/#/docs/main/stable/general/welcome for help.
-const token = require("./token.js"); // Imports the token key for the bot to launch.
-const TOKEN = process.env.DISCORD_TOKEN;
+const TOKEN = process.env.DISCORD_TOKEN; // Imports the token key for the bot to launch.
 
 
 const StormDB = require("stormdb");
