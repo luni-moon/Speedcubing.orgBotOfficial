@@ -224,7 +224,8 @@ module.exports = class SettingsCommand extends Command {
       .addField("Auto Moderation: ", AModeration)
       .addField("Dead Chat Pings: ", DCPings)
       .addField("Ranking System: ", RSystem)
-      .addField("Dead Chat Ping Time: ", DCPTime)
+      .addField("Dead Chat Ping Time: ", DCPTime);
+
     message.channel.send(BotSettingsOverview);
   }
 }
