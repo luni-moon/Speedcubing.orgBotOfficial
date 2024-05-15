@@ -30,4 +30,8 @@ var BotConfiguration = [
 
   // ---------- Channel Congiguration ----------
   WelcomeChannelID = "827689439940575233",
+
+  // ---------- Error Messages ----------
+  DMMessage = "Sorry, this command cannot be used in DMs",
+  PermissionErrorMessage = "You may not use this command, you do not have the correct permissions!"
 ];

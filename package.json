@@ -2,7 +2,9 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "discord.js-commando": "^0.12.3",
+    "pg": "^8.6.0",
     "save": "^2.4.0",
-    "stormdb": "^0.4.1"
+    "stormdb": "^0.4.1",
+    "yarn": "^1.22.11"
   }
 }
